@@ -11,7 +11,7 @@
 
 ## 公開 URL
 
-<!-- 👉 [https://summitjournal.vercel.app/](https://summitjournal.vercel.app/) -->
+👉 [https://java-script-rosy-six.vercel.app/](https://java-script-rosy-six.vercel.app/)
 
 ## 使用技術
 
