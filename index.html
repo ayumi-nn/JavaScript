@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>JavaScriptまとめ</title>
+    <meta name="description" content="ページの説明" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- favicon/webclipicon -->
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="img/webclip.png" />
+
+    <!-- ogp -->
+    <meta property="og:site_name" content="サイト名" />
+    <meta property="og:url" content="URL" />
+    <meta property="og:type" content="website or article" />
+    <meta property="og:title" content="ページのタイトル" />
+    <meta property="og:description" content="ページの説明" />
+    <meta property="og:image" content="URL" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="ページの説明" />
+    <meta name="twitter:image:src" content="URL" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- js -->
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">JavaScriptまとめ</h1>
+
+      <button class="hamburger-open-button" id="js-hamburger-open-button">
+        ハンバーガーメニュー
+      </button>
+
+      <div
+        class="hamburger-bg"
+        id="js-hamburger-bg"
+        style="display: none"
+      ></div>
+
+      <dialog
+        class="hamburger"
+        id="js-hamburger"
+        aria-label="ダイアログ"
+        autofocus
+      >
+        <div class="hamburger-inner" id="js-hamburger-inner">
+          <div class="hamburger-header">
+            <button class="hamburger-close-button" id="js-hamburger-close">
+              close
+            </button>
+          </div>
+          <div class="hamburger-body">
+            <ul class="hamburgermenu-list">
+              <li>
+                <a
+                  href="https://www.google.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >about</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.google.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >service</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.google.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >company</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.google.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >recruit</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.google.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </dialog>
+    </header>
+
+    <div class="container">
+      <!-- ドロップダウンメニュー -->
+      <h2>ドロップダウンメニュー</h2>
+      <div class="c-inner">
+        <div class="dropdown-menu">
+          <button class="dropdown-menu-icon js-button">
+            ドロップダウンメニュー
+          </button>
+
+          <ul class="dropdown-menu-list js-menu-list">
+            <li><a href="https://www.google.com/">アカウント設定</a></li>
+            <li><a href="https://www.google.com/">カード情報</a></li>
+            <li><a href="https://www.google.com/">購入履歴</a></li>
+            <li><a href="https://www.google.com/">ログアウト</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- モーダル -->
+      <h2>モーダル</h2>
+      <div class="c-inner">
+        <div class="modal-container">
+          <button class="modal-open" id="js-modal-open">モーダルOPEN</button>
+
+          <div
+            class="modal-inner"
+            id="js-modal-inner"
+            style="display: none"
+          ></div>
+
+          <dialog class="modal" id="js-modal" aria-label="ダイアログ" autofocus>
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button class="modal-close-button" id="js-modal-close">
+                    <span class="u-visually-hidden">閉じる</span>
+                    &times;
+                  </button>
+                </div>
+                <div class="modal-text">
+                  私は特に夢を尊重もしませんが、<a
+                    href="https://www.google.com/"
+                    target="_blank"
+                    >夢見</a
+                  >が好いと其日一日の氣分が何となく嬉しく愉快で、心に張りがあり、仕事をするのに勇氣が自然に伴つて、それがために仕事が意外に捗ると云ふやうな經驗は月の中に二三度もあります。
+                </div>
+              </div>
+          </dialog>
+        </div>
+      </div>
+      <!-- タブメニュー -->
+      <h2>タブメニュー</h2>
+      <div class="c-inner">
+        <div>
+          <!-- タブ -->
+          <ul class="tabmenu-list">
+            <li>
+              <button
+                class="tab-button js-tab-button active"
+                data-tabid="tab-page1"
+              >
+                春の日の夕暮
+              </button>
+            </li>
+            <li>
+              <button class="tab-button js-tab-button" data-tabid="tab-page2">
+                少年時
+              </button>
+            </li>
+          </ul>
+          <!-- タブメニュー　コンテンツ -->
+          <div class="tabmenu-contents">
+            <div class="tab-content js-tab-content active" id="tab-page1">
+              <p>
+                トタンがセンベイ食べて 春の日の夕暮は穏かです
+                アンダースローされた灰が蒼ざめて 春の日の夕暮は静かです
+                吁ああ！　案山子かかしはないか――あるまい
+                馬嘶いななくか――嘶きもしまい
+                ただただ月の光のヌメランとするまゝに 従順なのは　春の日の夕暮か
+                ポトホトと野の中に伽藍がらんは紅く 荷馬車の車輪　油を失ひ
+                私が歴史的現在に物を云へば 嘲る嘲る　空と山とが
+                瓦が一枚　はぐれました これから春の日の夕暮は
+                無言ながら　前進します
+                自みづからの　静脈管の中へです（青空文庫より）
+              </p>
+            </div>
+            <div class="tab-content js-tab-content" id="tab-page2">
+              黝あをぐろい石に夏の日が照りつけ、 庭の地面が、朱色に睡つてゐた。
+              地平の果に蒸気が立つて、 世の亡ぶ、兆きざしのやうだつた。
+              麦田には風が低く打ち、 おぼろで、灰色だつた。
+              翔とびゆく雲の落とす影のやうに、 田の面もを過ぎる、昔の巨人の姿――
+              夏の日の午ひる過ぎ時刻 誰彼の午睡ひるねするとき、
+              私は野原を走つて行つた…… 私は希望を唇に噛みつぶして
+              私はギロギロする目で諦めてゐた……
+              噫ああ、生きてゐた、私は生きてゐた！（青空文庫より）
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- アコーディオンメニュー -->
+      <h2>アコーディオンメニュー</h2>
+      <div class="c-inner">
+        <div class="accordion-wrap">
+          <details class="accordion js-accordion">
+            <summary class="accordion-summary js-summary">
+              <span>Q. クレジットカードで支払えますか？</span>
+              <span class="accordion-icon">
+                <span></span>
+                <span></span>
+              </span>
+            </summary>
+            <div class="accordion-content js-accordion-content">
+              <div class="accordion-inner">
+                <p>
+                  親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。弱虫やーい。と囃したからである。小使に負ぶさって帰って来た時、おやじが大きな眼をして二階ぐらいから飛び降りて腰を抜かす奴があるかと云ったから、この次は抜かさずに飛んで見せますと答えた。（青空文庫より）
+                </p>
+              </div>
+            </div>
+          </details>
+        </div>
+        <div class="accordion-wrap">
+          <details class="accordion js-accordion">
+            <summary class="accordion-summary js-summary">
+              <span>Q. クレジットカードで支払えますか？</span>
+              <span class="accordion-icon">
+                <span></span>
+                <span></span>
+              </span>
+            </summary>
+            <div class="accordion-content js-accordion-content">
+              <div class="accordion-inner">
+                <p>
+                  親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。弱虫やーい。と囃したからである。小使に負ぶさって帰って来た時、おやじが大きな眼をして二階ぐらいから飛び降りて腰を抜かす奴があるかと云ったから、この次は抜かさずに飛んで見せますと答えた。（青空文庫より）
+                </p>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

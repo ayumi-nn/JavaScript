@@ -1,0 +1,386 @@
+/* ----------------------
+ハンバーガーメニュー
+---------------------- */
+.hamburger-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  font-size: 16px;
+  margin-inline: auto;
+  padding: 50px 50px;
+}
+
+.hamburger {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 0;
+}
+
+.hamburger::backdrop {
+  background-color: transparent;
+}
+
+.hamburger-bg {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+}
+
+.hamburger-inner {
+  color: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+.hamburger-open-button {
+  background-color: var(--color-pink);
+  font-weight: bold;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.hamburger-body {
+  font-weight: bold;
+  font-size: 24px;
+  text-transform: capitalize;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hamburgermenu-list li {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.hamburger-close-button {
+  display: grid;
+  place-items: center;
+  background-color: rgb(235, 235, 235);
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  margin-left: auto;
+}
+
+/* -------------- design ----------------- */
+
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  font-size: 16px;
+  margin-inline: auto;
+  padding: 50px 50px;
+  background-color: var(--color-orange);
+  color: #fff;
+}
+
+/* logo */
+.logo {
+  font-weight: bold;
+  padding: 1rem;
+  color: var(--color-black);
+  font-size: 24px;
+}
+
+.u-visually-hidden {
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  border: 0 !important;
+  padding: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  margin: -1px !important;
+}
+
+/* ----------------------
+ドロップダウンメニュー
+---------------------- */
+.dropdown-menu-icon {
+  padding: 1em;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: var(--color-green);
+  color: var(--color-white);
+  font-weight: bold;
+}
+
+.dropdown-menu-list {
+  background-color: #f8f8f8;
+  border: 1px solid #bdbdbd;
+  border-radius: 16px;
+  width: 180px;
+  visibility: hidden;
+  z-index: 10;
+  position: absolute;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.dropdown-menu-list li {
+  overflow-wrap: anywhere;
+}
+
+.dropdown-menu-list li a {
+  display: block;
+  padding: 12px 24px;
+}
+
+.is-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.dropdown-menu-list li:not(:last-child) {
+  border-bottom: 1px solid #bdbdbd;
+}
+
+/* ----------------------
+モーダル
+---------------------- */
+/* モーダルが開いている間、スクロールを抑制 */
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
+/* modal */
+
+.modal-container {
+  display: grid;
+  place-items: center;
+}
+
+.modal-open {
+  background-color: var(--color-pink);
+  color: #fff;
+  font-weight: bold;
+  padding: 1em;
+  border-radius: 8px;
+}
+
+.modal-content {
+  background-color: #fff;
+  width: 500px;
+  padding: 36px;
+}
+
+.modal-content a {
+  color: cornflowerblue;
+  text-decoration: underline;
+}
+
+.modal-close-button {
+  display: grid;
+  place-items: center;
+  background-color: rgb(235, 235, 235);
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+  margin-left: auto;
+  border-radius: 6px;
+  position: absolute;
+  top: 6px;
+  right: 6px;
+}
+
+.modal-inner {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+}
+
+.modal::backdrop {
+  background-color: transparent;
+}
+
+/*----------------------
+tab-menu
+ ---------------------- */
+
+.tabmenu-list {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.tabmenu-list li {
+  width: 100%;
+}
+
+.tab-button {
+  width: 100%;
+  padding: 7px 0 7px 0;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  border-bottom: solid 2px var(--color-yellow);
+  opacity: 0.5;
+  background-color: var(--color-green);
+
+  color: var(--color-white);
+}
+
+.tab-button:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+/* 表示中のタブのCSS */
+.tab-button.active {
+  opacity: 1;
+}
+
+.tabmenu-contents {
+  background-color: var(--color-green);
+  overflow: hidden;
+}
+
+.tab-content {
+  margin: 0 auto;
+  padding: 3.75% 1% 3.75% 1%;
+  display: none;
+  background-color: var(--color-green);
+  color: var(--color-white);
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* ---------------------------------
+アコーディオンメニュー
+--------------------------------- */
+
+.accordion-wrap {
+  margin: 20px 0;
+  width: 100%;
+}
+
+.accordion {
+  background-color: var(--color-pink);
+  color: #fff;
+}
+
+.accordion-summary {
+  display: flex;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 12px 12px 12px 16px;
+  justify-content: space-between;
+}
+
+/* ---------------------------------
+↓＋マークのアイコン
+--------------------------------- */
+
+.accordion-icon {
+  display: block;
+  position: relative;
+  width: 12px;
+}
+
+.accordion-icon > span {
+  display: block;
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  background-color: #fff;
+  top: 50%;
+}
+
+.accordion-icon > span:nth-of-type(2) {
+  transform: rotate(90deg);
+}
+
+/* ---------------------------------
+↓開いたときの中身
+--------------------------------- */
+.accordion-content {
+  background-color: var(--color-accordion-content);
+  color: #333;
+  overflow: hidden;
+}
+
+.accordion-inner {
+  padding: 16px;
+}
+
+/* -------------- design ----------------- */
+
+:root {
+  --color-pink: #ff9898;
+  --color-orange: #ffd586;
+  --color-white: #fbf8ef;
+  --color-black: #a76545;
+  --color-green: #96ceb4;
+  --color-yellow: #ffe99a;
+  --color-blue: #1679ab;
+  --color-tab-line: #ffe99a;
+  --color-tab-text: #675454;
+  --color-bg-tab: #a6cdc6;
+  --color-accordion-content: #f5babb;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+body {
+  line-height: 1.8;
+  font-size: 16px;
+  color: var(--color-black);
+  background-color: var(--color-orange);
+}
+
+.container {
+  width: 90%;
+  max-width: 960px;
+  margin-inline: auto;
+  padding: 50px 0;
+}
+
+.text p {
+  margin: 2rem 0;
+}
+
+.c-inner {
+  background-color: var(--color-white);
+  /* margin: 10px 0; */
+  padding: 50px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+}
+
+h2 {
+  margin-top: 80px;
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
